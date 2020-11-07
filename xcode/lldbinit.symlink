@@ -5,5 +5,5 @@ command script import /usr/local/opt/chisel/libexec/fblldb.py
 command alias poc expression -l objc -o --
 
 ### Reveal LLDB commands support - DO NOT MODIFY
-command script import /Users/mkao/Library/Application\ Support/Reveal/RevealServerCommands.py
+command script import $HOME/Library/Application\ Support/Reveal/RevealServerCommands.py
 ###
