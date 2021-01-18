@@ -5,7 +5,7 @@ Currently I use the fish shell, which is why I had to port Holman's project from
 zsh to fish.
 
 If you're interested in the philosophy behind why projects like these are
-awesome, you might want to [read my post on the
+awesome, you might want to [read Zach Holman's post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 
