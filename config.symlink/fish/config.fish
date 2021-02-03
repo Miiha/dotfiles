@@ -4,7 +4,8 @@ set fisher_config ~/.config/fisherman
 source ~/.brew-credentials.local
 
 status --is-interactive; and source (rbenv init -|psub)
-status --is-interactive; and source (pyenv init -|psub)
+status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
 
 set -gx PATH ~/.rbenv/shims $PATH
 set -gx PATH ~/.pyenv/shims $PATH
@@ -21,6 +22,9 @@ eval (thefuck --alias | tr '\n' ';')
 
 set -gx FISH $HOME/.dotfiles
 set config_files $FISH/**/*.fish
+
+# hook direnv into fish shell
+direnv hook fish | source
 
 # load the path files
 for file in $config_files

@@ -86,4 +86,7 @@
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
-
+[init]
+	defaultBranch = main
+[user]
+	useConfigOnly = true
