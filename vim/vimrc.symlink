@@ -47,9 +47,6 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'jistr/vim-nerdtree-tabs'
 
-" File search
-Plugin 'ctrlpvim/ctrlp.vim'
-
 " Syntax checking
 Plugin 'scrooloose/syntastic'
 
@@ -62,6 +59,12 @@ Plugin 'jparise/vim-graphql'
 " markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+
+" latex
+Plugin 'lervag/vimtex'
+
+" run Dash.app 
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -76,7 +79,8 @@ map <Leader><Space>f <Plug>(easymotion-bd-f)
 " mappings
 map <C-n> :NERDTreeToggle<CR>
 map <A-BS> db
-map <C-t> :Files<CR>
+map <C-p> :Files<CR>
+map <C-g> :Rg<CR>
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
@@ -165,7 +169,7 @@ au FileType make setl ts=2 sts=2 sw=2 noet
 
 au BufRead,BufNewFile Podfile,Fastfile,*.podspec set filetype=ruby
 au BufRead,BufNewFile Jenkinsfile* set filetype=groovy
-
+au BufRead,BufNewFile apple-app-site-association set filetype=json
 
 " macvim
 set gfn=Ubuntu\ Mono\ derivative\ Powerline:h16
@@ -180,7 +184,8 @@ let NERDTreeIgnore = ['\.pyc$']
 let g:nerdtree_tabs_open_on_gui_startup=0
 
 " vim-markdown
-" let g:vim_markdown_folding_disabled = 1
+set conceallevel=2
+let g:vim_markdown_folding_disabled = 1
 " let g:vim_markdown_conceal = 0
 
 " Ripgrep command
@@ -208,8 +213,4 @@ nnoremap gr gdV%::s/<C-R>///gc<left><left><left>
 
 " For global replace
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
-
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPLastMode'
-let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 
