@@ -133,6 +133,10 @@ nnoremap tn :tabnew<CR>
 nnoremap td :tabclose<CR>
 nnoremap tm :tabm<Space>
 
+" Show next matched string at the center of the screen
+nnoremap n nzz
+nnoremap N Nzz
+
 cnoremap w!! w !sudo tee > /dev/null %
 
 " theme

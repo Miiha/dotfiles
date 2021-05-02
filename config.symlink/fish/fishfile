@@ -5,3 +5,4 @@ fisherman/nvm
 fisherman/rbenv
 fisherman/z
 pure-fish/pure
+evanlucas/fish-kubectl-completions

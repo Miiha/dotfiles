@@ -121,5 +121,17 @@ bind-key i command-prompt -p "send pane to:"  "join-pane -t '%%'"
 bind-key -n C-S-Left swap-window -t -1\; select-window -t -1
 bind-key -n C-S-Right swap-window -t +1\; select-window -t +1
 
+# Double LMB Select & Copy (Word)
+bind-key -T copy-mode-vi DoubleClick1Pane \
+    select-pane \; \
+    send-keys -X select-word-no-clear \; \
+    send-keys -X copy-pipe-no-clear "xclip -in -sel primary"
+
+bind-key -n DoubleClick1Pane \
+    select-pane \; \
+    copy-mode -M \; \
+    send-keys -X select-word \; \
+    send-keys -X copy-pipe-no-clear "xclip -in -sel primary"
+
 # run '~/.tmux/plugins/tpm/tpm'
 

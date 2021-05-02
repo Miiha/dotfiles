@@ -1,2 +1,2 @@
-alias d 'docker'
-alias dc 'docker-compose'
+abbr -a d docker
+abbr -a dc docker-compose

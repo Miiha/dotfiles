@@ -1,4 +1,9 @@
 set surround
 set multiple-cursors
+set clipboard+=unnamed
 
 map \r :action ReformatCode<CR>
+
+" Show next matched string at the center of the screen
+nnoremap n nzz
+nnoremap N Nzz
