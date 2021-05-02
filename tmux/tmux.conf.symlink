@@ -9,7 +9,7 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 # set -g @plugin 'tmux-plugins/tmux-open'
 
 set-option -g default-shell /usr/local/bin/fish
-set-option -g history-limit 4000
+set-option -g history-limit 10000
 
 ## Status bar design
 # status line
