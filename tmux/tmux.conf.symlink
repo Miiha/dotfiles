@@ -10,6 +10,7 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 
 set-option -g default-shell /usr/local/bin/fish
 set-option -g history-limit 10000
+set -g default-terminal "xterm-256color"
 
 ## Status bar design
 # status line
