@@ -218,3 +218,5 @@ nnoremap gr gdV%::s/<C-R>///gc<left><left><left>
 " For global replace
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
+" mvim
+set guifont=JetBrains\ Mono\ Regular:h18
