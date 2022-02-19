@@ -20,3 +20,10 @@ alias o 'open'
 alias help 'tldr'
 alias du 'ncdu --color dark -rr -x'
 alias cat 'bat'
+
+# mv, rm, cp
+alias mv 'mv -v'
+alias rm 'rm -i -v'
+alias cp 'cp -v'
+
+alias hosts 'sudo $EDITOR /etc/hosts'
