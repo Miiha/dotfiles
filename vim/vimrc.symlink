@@ -149,6 +149,8 @@ colorscheme Tomorrow-Night-Eighties
 
 nnoremap <leader>g :w !gitup<CR><CR>
 
+" umlauts
+inoremap <ALT-u> <C-k>:
 
 " tab bar
 hi TabLineFill term=bold cterm=bold ctermbg=0
@@ -170,6 +172,7 @@ au FileType groovy setl ts=2 sts=2 sw=2 expandtab
 au FileType yml setl ts=2 sts=2 sw=2 noet
 au FileType cmake setl ts=4 sts=4 sw=4 expandtab
 au FileType make setl ts=2 sts=2 sw=2 noet
+au FileType toml setl ts=2 sts=2 sw=2 noet
 
 au BufRead,BufNewFile Podfile,Fastfile,*.podspec set filetype=ruby
 au BufRead,BufNewFile Jenkinsfile* set filetype=groovy
