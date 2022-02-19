@@ -61,7 +61,7 @@
 	# tag
 	lasttag = describe --tags --abbrev=0
 	lt = !"git lasttag"
-	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-master}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
+	ksreview = "!f() { local SHA=${1:-HEAD}; local BRANCH=${2:-develop}; if [ $SHA == $BRANCH ]; then SHA=HEAD; fi; git difftool -y -t Kaleidoscope $BRANCH...$SHA; }; f"
 	prune-local = ! "git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d"
 	merged-local = ! "git branch --merged | egrep -v \"(^\\*|master|develop)\""
 	caa = commit -a --amend -C HEAD
@@ -90,3 +90,12 @@
 	defaultBranch = main
 [user]
 	useConfigOnly = true
+	name = Michael Kao
+	email = micha.kao@posteo.de
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	excludesFile = ~/.gitignore

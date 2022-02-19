@@ -5,6 +5,7 @@ config.symlink/fisher/github.com
 config.symlink/fisherman
 config.symlink/nvm
 config.symlink/configstore/*
+config.symlink/gcloud
 
 config.symlink/karabiner/automatic_backups
 
