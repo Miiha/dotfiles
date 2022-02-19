@@ -37,3 +37,9 @@ end
 
 bind -e \ee
 bind -e \ev
+
+# asdf manager
+source /usr/local/opt/asdf/libexec/asdf.fish
+
+# direnv
+direnv hook fish | source
