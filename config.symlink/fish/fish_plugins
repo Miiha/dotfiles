@@ -2,8 +2,8 @@ jorgebucaran/fisher
 edc/bass
 fisherman/fzf
 fisherman/getopts
-fisherman/nvm
 fisherman/rbenv
 fisherman/z
 evanlucas/fish-kubectl-completions
-pure-fish/pure
+ivakyb/fish_ssh_agent
+lgathy/google-cloud-sdk-fish-completion
