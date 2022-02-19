@@ -14,9 +14,6 @@ for file in ~/.config/fish/conf.d/*.fish
     source $file
 end
 
-# the fuck
-eval (thefuck --alias | tr '\n' ';')
-
 # nvm 
 # bass source (brew --prefix nvm)/nvm.sh
 
