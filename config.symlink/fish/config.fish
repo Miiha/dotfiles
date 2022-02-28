@@ -3,11 +3,9 @@ set fisher_config ~/.config/fisherman
 
 source ~/.brew-credentials.local
 
-status --is-interactive; and source (rbenv init -|psub)
 status --is-interactive; and pyenv init - | source
 status --is-interactive; and pyenv virtualenv-init - | source
 
-set -gx PATH ~/.rbenv/shims $PATH
 set -gx PATH ~/.pyenv/shims $PATH
 
 for file in ~/.config/fish/conf.d/*.fish
