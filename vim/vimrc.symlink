@@ -182,9 +182,6 @@ au BufRead,BufNewFile apple-app-site-association set filetype=json
 set gfn=Ubuntu\ Mono\ derivative\ Powerline:h16
 set linespace=2
 
-" ycm
-let g:ycm_path_to_python_interpreter = '/Users/micha/.pyenv/shims/python'
-
 " hide files in nerdtree
 let NERDTreeIgnore = ['\.pyc$']
 
