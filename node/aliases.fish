@@ -1,2 +1,1 @@
-alias be 'bundle exec'
 
