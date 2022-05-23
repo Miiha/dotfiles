@@ -76,5 +76,8 @@ defaults write com.apple.dt.Xcode EnableBuildSystemLogging -bool true
 # https://twitter.com/dmartincy/status/1034930612543676418
 # When Xcode is indexing a project you can show the number of remaining files,
 # instead of the generic "Processing files"
-defaults write http://com.apple .dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
+defaults write http://com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool true
+
+# Shows the build duration build status 
+defaults write http://com.apple.dt.Xcode ShowBuildOperationDuration YES
 
