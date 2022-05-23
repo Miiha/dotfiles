@@ -6,11 +6,27 @@
 # bind a send-prefix
 
 set -g @plugin 'tmux-plugins/tmux-copycat'
+set -g @plugin 'laktak/extrakto'
 # set -g @plugin 'tmux-plugins/tmux-open'
 
 set-option -g default-shell /usr/local/bin/fish
 set-option -g history-limit 10000
 set -g default-terminal "xterm-256color"
+
+# address vim mode switching delay (http://superuser.com/a/252717/65504)
+set -s escape-time 0
+
+# tmux messages are displayed for 4 seconds
+set -g display-time 4000
+
+# focus events enabled for terminals that support them
+set -g focus-events on
+
+# super useful when using "grouped sessions" and multi-monitor setup
+setw -g aggressive-resize on
+
+bind C-b send-prefix
+bind b last-window
 
 ## Status bar design
 # status line
@@ -134,5 +150,5 @@ bind-key -n DoubleClick1Pane \
     send-keys -X select-word \; \
     send-keys -X copy-pipe-no-clear "xclip -in -sel primary"
 
-# run '~/.tmux/plugins/tpm/tpm'
+run '~/.tmux/plugins/tpm/tpm'
 
