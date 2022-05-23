@@ -79,7 +79,7 @@ map <Leader><Space>f <Plug>(easymotion-bd-f)
 " mappings
 map <C-n> :NERDTreeToggle<CR>
 map <A-BS> db
-map <C-p> :Files<CR>
+map <C-o> :Files<CR>
 map <C-g> :Rg<CR>
 
 nmap ,n :NERDTreeFind<CR>
@@ -173,6 +173,7 @@ au FileType yml setl ts=2 sts=2 sw=2 noet
 au FileType cmake setl ts=4 sts=4 sw=4 expandtab
 au FileType make setl ts=2 sts=2 sw=2 noet
 au FileType toml setl ts=2 sts=2 sw=2 noet
+au FileType gradle setl ts=2 sts=2 sw=2 expandtab
 
 au BufRead,BufNewFile Podfile,Fastfile,*.podspec set filetype=ruby
 au BufRead,BufNewFile Jenkinsfile* set filetype=groovy
@@ -200,8 +201,6 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
-" nerd tree
-"let g:nerdtree_tabs_open_on_console_startup=1
 
 " trim whitespace
 fun! TrimWhitespace()
@@ -220,3 +219,6 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 " mvim
 set guifont=JetBrains\ Mono\ Regular:h18
+
+" save all swapfiles to tmp
+set directory=$HOME/.vim/swapfiles//
