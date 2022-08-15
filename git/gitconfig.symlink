@@ -99,3 +99,5 @@
 	clean = git-lfs clean -- %f
 [core]
 	excludesFile = ~/.gitignore
+[push]
+	autoSetupRemote = true
