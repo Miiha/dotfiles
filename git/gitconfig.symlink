@@ -92,8 +92,6 @@
 	defaultBranch = main
 [user]
 	useConfigOnly = true
-	name = Michael Kao
-	email = micha.kao@posteo.de
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
