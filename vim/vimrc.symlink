@@ -66,6 +66,9 @@ Plugin 'lervag/vimtex'
 " run Dash.app 
 Plugin 'rizzatti/dash.vim'
 
+" just syntax 
+Plugin 'NoahTheDuke/vim-just'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -167,7 +170,7 @@ au Filetype html setlocal ts=2 sts=2 sw=2 noet
 au Filetype js setlocal ts=2 sw=2 noet
 au Filetype json setlocal ts=2 sts=2 sw=2 noet
 au FileType python setl ts=4 sts=4 sw=4 noet
-au FileType swift setl ts=2 sts=2 sw=2 noet
+au FileType swift setl ts=2 sts=2 sw=2 expandtab
 au FileType groovy setl ts=2 sts=2 sw=2 expandtab
 au FileType yml setl ts=2 sts=2 sw=2 noet
 au FileType cmake setl ts=4 sts=4 sw=4 expandtab

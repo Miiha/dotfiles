@@ -1,1 +1,1 @@
-abbr -a kc kubectl
+abbr -a k kubectl

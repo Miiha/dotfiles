@@ -15,7 +15,7 @@ alias la 'ls -lah'
 alias c 'clear'
 alias map "xargs -n1"
 alias st 'open -a SourceTree'
-alias o 'open'
+abbr o 'open'
 
 alias help 'tldr'
 alias du 'ncdu --color dark -rr -x'

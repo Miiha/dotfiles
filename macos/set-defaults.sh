@@ -49,6 +49,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
 
 # Show the ~/Library folder.
 chflags nohidden ~/Library
@@ -59,6 +60,13 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Show path bar in the bottom of the Finder windows
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "false"
+defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0"
+
+killall Finder
 
 ###############################################################################
 # Keyboard                                                                    #
@@ -121,3 +129,13 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ###############################################################################
 
 defaults write com.apple.iphonesimulator ShowSingleTouches 1
+
+###############################################################################
+# Dock
+###############################################################################
+
+defaults write com.apple.dock "orientation" -string "bottom"
+defaults write com.apple.dock "tilesize" -int "36"
+defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "show-recents" -bool "false"
+killall Dock

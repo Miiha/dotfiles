@@ -13,6 +13,8 @@
 	dc = diff --cached
 	fe = fetch
 	pl = pull
+        fr = "!f() { git fetch && git rebase origin/"$1"; }; f"
+        fm = "!f() { git fetch && git merge origin/"$1"; }; f"
 
 	# reset 
 	r = reset
@@ -101,3 +103,5 @@
 	excludesFile = ~/.gitignore
 [push]
 	autoSetupRemote = true
+[rerere]
+	enabled = true
