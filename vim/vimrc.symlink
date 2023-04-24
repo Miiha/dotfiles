@@ -140,6 +140,15 @@ nnoremap tm :tabm<Space>
 nnoremap n nzz
 nnoremap N Nzz
 
+" Edit vimrc 
+nnoremap <Leader>ve :e ~/.vimrc<CR>
+" " Reload vimr configuration file
+nnoremap <Leader>vr :source ~/.vimrc<CR>
+
+" jump buffers
+nnoremap <C-j> :bprev<CR>                                                                            
+nnoremap <C-k> :bnext<CR>
+
 cnoremap w!! w !sudo tee > /dev/null %
 
 " theme
