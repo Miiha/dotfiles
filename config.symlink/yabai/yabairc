@@ -1,0 +1,20 @@
+yabai -m config layout bsp
+
+#yabai -m config top_padding    0
+#yabai -m config bottom_padding 0
+#yabai -m config left_padding   0
+#yabai -m config right_padding  0
+#yabai -m config window_gap     0
+
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner*" manage=off
+yabai -m rule --add app="^1Password 7*" manage=off
+yabai -m rule --add app="^Simulator*" manage=off
+yabai -m rule --add app="^FortiClient*" manage=off
+yabai -m rule --add app="^GK6*" manage=off
+yabai -m rule --add app="^Keyboard Maestro*" manage=off
+
+# Mouse follows focus makes it so that when yabai focuses another window (e.g. through a focus command), the mouse cursor gets moved to the center of the focused window.
+yabai -m config mouse_follows_focus off
