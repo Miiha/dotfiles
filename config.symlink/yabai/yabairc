@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 yabai -m config layout bsp
 
 #yabai -m config top_padding    0
@@ -15,6 +17,7 @@ yabai -m rule --add app="^Simulator*" manage=off
 yabai -m rule --add app="^FortiClient*" manage=off
 yabai -m rule --add app="^GK6*" manage=off
 yabai -m rule --add app="^Keyboard Maestro*" manage=off
+yabai -m rule --add app="^Microsoft (Teams$|Outlook$)" space=^4
 
 # Mouse follows focus makes it so that when yabai focuses another window (e.g. through a focus command), the mouse cursor gets moved to the center of the focused window.
 yabai -m config mouse_follows_focus off
