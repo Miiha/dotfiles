@@ -6,6 +6,7 @@ config.symlink/fisherman
 config.symlink/nvm
 config.symlink/configstore/*
 config.symlink/gcloud
+config.symlink/glab-cli
 
 config.symlink/karabiner/automatic_backups
 
