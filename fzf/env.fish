@@ -1,1 +1,1 @@
-set -g FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden -g "!.git" '

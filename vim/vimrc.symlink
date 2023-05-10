@@ -84,6 +84,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <A-BS> db
 map <C-o> :Files<CR>
 map <C-g> :Rg<CR>
+map <C-h> :History<CR>
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
@@ -121,10 +122,10 @@ xnoremap <leader>d "_d
 xnoremap <leader>p "_dP
 
 " split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
 
 " tabs
 nnoremap th :tabfirst<CR>
@@ -208,7 +209,7 @@ let g:vim_markdown_folding_disabled = 1
 " Ripgrep command
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   'rg --hidden --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
