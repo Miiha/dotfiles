@@ -63,10 +63,10 @@ Plugin 'plasticboy/vim-markdown'
 " latex
 Plugin 'lervag/vimtex'
 
-" run Dash.app 
+" run Dash.app
 Plugin 'rizzatti/dash.vim'
 
-" just syntax 
+" just syntax
 Plugin 'NoahTheDuke/vim-just'
 
 call vundle#end()            " required
@@ -82,9 +82,10 @@ map <Leader><Space>f <Plug>(easymotion-bd-f)
 " mappings
 map <C-n> :NERDTreeToggle<CR>
 map <A-BS> db
-map <C-o> :Files<CR>
+noremap <C-o> :Files<CR>
 map <C-g> :Rg<CR>
 map <C-h> :History<CR>
+map <C-t> :Buffers<CR>
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
@@ -141,13 +142,13 @@ nnoremap tm :tabm<Space>
 nnoremap n nzz
 nnoremap N Nzz
 
-" Edit vimrc 
+" Edit vimrc
 nnoremap <Leader>ve :e ~/.vimrc<CR>
 " " Reload vimr configuration file
 nnoremap <Leader>vr :source ~/.vimrc<CR>
 
 " jump buffers
-nnoremap <C-j> :bprev<CR>                                                                            
+nnoremap <C-j> :bprev<CR>
 nnoremap <C-k> :bnext<CR>
 
 cnoremap w!! w !sudo tee > /dev/null %
@@ -206,6 +207,7 @@ set conceallevel=2
 let g:vim_markdown_folding_disabled = 1
 " let g:vim_markdown_conceal = 0
 
+" fzf
 " Ripgrep command
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -214,6 +216,8 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
+let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_prefer_tmux = 0
 
 " trim whitespace
 fun! TrimWhitespace()
@@ -221,7 +225,6 @@ fun! TrimWhitespace()
     %s/\s\+$//e
     call setpos('.', l:save_cursor)
 endfun
-
 noremap <Leader>t :call TrimWhitespace()<CR>
 
 " For local replace
@@ -235,3 +238,8 @@ set guifont=JetBrains\ Mono\ Regular:h18
 
 " save all swapfiles to tmp
 set directory=$HOME/.vim/swapfiles//
+
+noremap <Leader>o <C-o>
+noremap <Leader>i <C-i>
+
+

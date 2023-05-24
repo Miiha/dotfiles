@@ -6,3 +6,5 @@
 	#bind \ec edit_command_buffer
 #end
 
+bind \e\[1\;5C 'nextd; commandline -f execute'
+bind \e\[1\;5D 'prevd; commandline -f execute'

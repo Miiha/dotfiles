@@ -5,11 +5,9 @@
 # set -g prefix C-a
 # bind a send-prefix
 
-set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'laktak/extrakto'
-# set -g @plugin 'tmux-plugins/tmux-open'
 
-set-option -g default-shell /usr/local/bin/fish
+set-option -g default-shell /opt/homebrew/bin/fish
 set-option -g history-limit 10000
 set -g default-terminal "xterm-256color"
 

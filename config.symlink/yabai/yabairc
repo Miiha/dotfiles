@@ -2,12 +2,14 @@
 
 yabai -m config layout bsp
 
-#yabai -m config top_padding    0
-#yabai -m config bottom_padding 0
-#yabai -m config left_padding   0
-#yabai -m config right_padding  0
-#yabai -m config window_gap     0
+#yabai -m config top_padding    10
+#yabai -m config bottom_padding 10
+#yabai -m config left_padding   10
+#yabai -m config right_padding  10
+#yabai -m config window_gap     10
 
+yabai -m rule --add app="^Charles$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
@@ -17,7 +19,9 @@ yabai -m rule --add app="^Simulator*" manage=off
 yabai -m rule --add app="^FortiClient*" manage=off
 yabai -m rule --add app="^GK6*" manage=off
 yabai -m rule --add app="^Keyboard Maestro*" manage=off
-yabai -m rule --add app="^Microsoft (Teams$|Outlook$)" space=^4
+yabai -m rule --add app="^Microsoft Teams$" space=^4
+yabai -m rule --add app="^Mail$" space=^5
+yabai -m rule --add app="^Microsoft Outlook$" space=^5
 
 # Mouse follows focus makes it so that when yabai focuses another window (e.g. through a focus command), the mouse cursor gets moved to the center of the focused window.
 yabai -m config mouse_follows_focus off
