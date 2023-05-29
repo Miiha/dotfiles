@@ -1,3 +1,3 @@
-set -gx PATH $PATH ~/.dotfiles/bin
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+fish_add_path ~/.dotfiles/bin
+fish_add_path /usr/local/sbin 
 
