@@ -1,6 +1,4 @@
-# asdf manager
-source (brew --prefix asdf)/libexec/asdf.fish
-
+echo $PATH
 set fisher_home /usr/local/lib/node_modules/fisherman
 set fisher_config ~/.config/fisherman
 
@@ -12,6 +10,8 @@ source ~/.brew-credentials.local
 
 set -gx FISH $HOME/.dotfiles
 set config_files $FISH/**/*.fish
+
+source (brew --prefix asdf)/libexec/asdf.fish
 
 # load the path files
 for file in $config_files

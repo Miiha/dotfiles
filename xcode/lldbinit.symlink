@@ -1,6 +1,6 @@
 # command script import ~/.lldb-scripts/reveal.py
 # command script import /usr/local/opt/chisel/fblldb.py
-command script import /usr/local/opt/chisel/libexec/fblldb.py
+command script import /opt/homebrew/opt/chisel/libexec/fblldb.py
 
 command alias poc expression -l objc -o --
 

@@ -59,6 +59,7 @@ Plugin 'jparise/vim-graphql'
 " markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'dhruvasagar/vim-table-mode'
 
 " latex
 Plugin 'lervag/vimtex'
@@ -225,7 +226,7 @@ fun! TrimWhitespace()
     %s/\s\+$//e
     call setpos('.', l:save_cursor)
 endfun
-noremap <Leader>t :call TrimWhitespace()<CR>
+noremap <Leader>tw :call TrimWhitespace()<CR>
 
 " For local replace
 nnoremap gr gdV%::s/<C-R>///gc<left><left><left>
